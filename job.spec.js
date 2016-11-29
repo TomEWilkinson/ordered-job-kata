@@ -7,6 +7,10 @@ describe('OrderJobsCommand', () => {
 
   describe('#execute', () => {
 
+    it('should return empty string for empty input', () => {
+      expect(order('')).to.eql('');
+    });
+
     it('should get the job if a single job is given', () => {
       expect(order('a =>')).to.eql('a');
       expect(order('b =>')).to.eql('b');
